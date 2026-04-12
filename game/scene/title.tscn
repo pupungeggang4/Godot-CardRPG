@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b1dyg22fc4vrv"]
+
+[ext_resource type="Script" uid="uid://bc6bhsv62xa8n" path="res://script/scene/title.gd" id="1_4fdtc"]
+
+[node name="Title" type="Node2D" unique_id=230228482]
+script = ExtResource("1_4fdtc")
+
+[node name="ButtonStart" type="ColorRect" parent="." unique_id=773070326]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonCollection" type="ColorRect" parent="." unique_id=1534444106]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonErase" type="ColorRect" parent="." unique_id=1142430710]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonQuit" type="ColorRect" parent="." unique_id=87269224]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=674247453]
+offset_right = 40.0
+offset_bottom = 40.0
