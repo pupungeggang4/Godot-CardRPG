@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ddgvvl8sgsfek"]
+
+[ext_resource type="Script" uid="uid://c40thybqkrmqd" path="res://script/entityfield/fieldplayer.gd" id="1_n6klx"]
+
+[node name="FieldPlayer" type="Node2D" unique_id=1130449065]
+script = ExtResource("1_n6klx")

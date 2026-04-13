@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://cmddl5ijydv6e"]
 
+[ext_resource type="Script" uid="uid://ctfj2fth7ygkx" path="res://script/scene/field.gd" id="1_odcg7"]
+[ext_resource type="PackedScene" uid="uid://ugxmllsesdpx" path="res://scene/subscene/menufield.tscn" id="2_evxyq"]
+
 [node name="Field" type="Node2D" unique_id=1578789711]
+script = ExtResource("1_odcg7")
+
+[node name="ButtonMenu" type="Button" parent="." unique_id=73732499]
+offset_left = 1220.0
+offset_top = 20.0
+offset_right = 1260.0
+offset_bottom = 60.0
+
+[node name="MenuTitle" parent="." unique_id=1919989580 instance=ExtResource("2_evxyq")]
+visible = false
+
+[connection signal="button_up" from="ButtonMenu" to="." method="_on_button_menu_button_up"]

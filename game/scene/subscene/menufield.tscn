@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ugxmllsesdpx"]
+
+[ext_resource type="Script" uid="uid://dxewgg6ea474i" path="res://script/subscene/menufield.gd" id="1_op67a"]
+
+[node name="MenuField" type="Control" unique_id=1919989580]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_op67a")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1463853631]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 200.0
+offset_right = 960.0
+offset_bottom = 520.0
+
+[node name="ButtonResume" type="Button" parent="ColorRect" unique_id=1542376110]
+layout_mode = 0
+offset_top = 80.0
+offset_right = 640.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 32
+text = "Resume"
+
+[node name="ButtonExit" type="Button" parent="ColorRect" unique_id=1467584324]
+layout_mode = 0
+offset_top = 160.0
+offset_right = 640.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 32
+text = "Exit to title"
+
+[node name="ButtonQuit" type="Button" parent="ColorRect" unique_id=164192049]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 640.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 32
+text = "Quit Game"
+
+[connection signal="button_up" from="ColorRect/ButtonResume" to="." method="_on_button_resume_button_up"]
+[connection signal="button_up" from="ColorRect/ButtonExit" to="." method="_on_button_exit_button_up"]
