@@ -1,13 +1,19 @@
 extends Node2D
 
 func _ready() -> void:
-    pass
+    Util.load_data()
     
 func _process(delta: float) -> void:
     pass
 
 func _on_button_start_button_up() -> void:
     get_tree().change_scene_to_file('res://scene/field.tscn')
+    
+func _on_button_collection_button_up() -> void:
+    get_tree().change_scene_to_file('res://scene/field.tscn')
+
+func _on_button_erase_button_up() -> void:
+    Util.erase_data()
 
 func _on_button_quit_button_up() -> void:
     get_tree().quit()

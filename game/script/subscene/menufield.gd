@@ -12,3 +12,6 @@ func _on_button_exit_button_up() -> void:
         scene_field.menu = false
         get_tree().change_scene_to_file('res://scene/title.tscn')
         hide()
+
+func _on_button_quit_button_up() -> void:
+    get_tree().quit()

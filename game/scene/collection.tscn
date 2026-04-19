@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://dvf2jr1tawd4j"]
 
 [node name="Collection" type="Node2D" unique_id=1145143125]
+
+[node name="ButtonBack" type="Button" parent="." unique_id=1518060743]
+offset_left = 1220.0
+offset_top = 20.0
+offset_right = 1260.0
+offset_bottom = 60.0

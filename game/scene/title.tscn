@@ -46,4 +46,6 @@ theme_override_font_sizes/font_size = 32
 text = "Quit Game"
 
 [connection signal="button_up" from="ButtonStart" to="." method="_on_button_start_button_up"]
+[connection signal="button_up" from="ButtonCollection" to="." method="_on_button_collection_button_up"]
+[connection signal="button_up" from="ButtonErase" to="." method="_on_button_erase_button_up"]
 [connection signal="button_up" from="ButtonQuit" to="." method="_on_button_quit_button_up"]
