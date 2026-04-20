@@ -2,17 +2,28 @@
 
 [ext_resource type="Script" uid="uid://ctfj2fth7ygkx" path="res://script/scene/field.gd" id="1_odcg7"]
 [ext_resource type="PackedScene" uid="uid://ugxmllsesdpx" path="res://scene/subscene/menufield.tscn" id="2_evxyq"]
+[ext_resource type="PackedScene" uid="uid://brchtpq364ois" path="res://scene/entityfield/fieldmap.tscn" id="2_galdp"]
 
 [node name="Field" type="Node2D" unique_id=1578789711]
 script = ExtResource("1_odcg7")
 
-[node name="ButtonMenu" type="Button" parent="." unique_id=73732499]
+[node name="FieldMap" parent="." unique_id=390681414 instance=ExtResource("2_galdp")]
+
+[node name="UI" type="Control" parent="." unique_id=2128324856]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonMenu" type="Button" parent="UI" unique_id=73732499]
+layout_mode = 0
 offset_left = 1220.0
 offset_top = 20.0
 offset_right = 1260.0
 offset_bottom = 60.0
 
-[node name="MenuTitle" parent="." unique_id=1919989580 instance=ExtResource("2_evxyq")]
+[node name="MenuTitle" parent="UI" unique_id=1919989580 instance=ExtResource("2_evxyq")]
 visible = false
+layout_mode = 0
 
-[connection signal="button_up" from="ButtonMenu" to="." method="_on_button_menu_button_up"]
+[connection signal="button_up" from="UI/ButtonMenu" to="." method="_on_button_menu_button_up"]

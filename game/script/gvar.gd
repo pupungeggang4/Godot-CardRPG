@@ -1,3 +1,6 @@
 extends Node
 
-var save = {}
+var save: Dictionary = {}
+
+var menu: bool = false
+var state: String = ''

@@ -14,7 +14,6 @@ func load_data() -> void:
         file.close()
     file = FileAccess.open("user://save.txt", FileAccess.READ)
     GVar.save = JSON.parse_string(file.get_as_text())
-    print(file.get_as_text())
 
 func erase_data() -> void:
     var file = FileAccess.open("user://save.txt", FileAccess.WRITE)
