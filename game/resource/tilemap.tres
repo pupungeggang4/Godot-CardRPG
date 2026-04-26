@@ -1,4 +1,20 @@
 [gd_resource type="TileSet" format=3 uid="uid://cnafwkbhms3na"]
 
+[ext_resource type="Texture2D" uid="uid://bghet5sw4cng5" path="res://icon.svg" id="1_mriet"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l45ob"]
+texture = ExtResource("1_mriet")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
 [resource]
 tile_size = Vector2i(40, 40)
+sources/0 = SubResource("TileSetAtlasSource_l45ob")

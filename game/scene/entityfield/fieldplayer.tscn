@@ -2,11 +2,21 @@
 
 [ext_resource type="Script" uid="uid://c40thybqkrmqd" path="res://script/entityfield/fieldplayer.gd" id="1_n6klx"]
 
-[node name="FieldPlayer" type="Node2D" unique_id=1130449065]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6klx"]
+size = Vector2(80, 80)
+
+[sub_resource type="Gradient" id="Gradient_hd2fy"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_d35du"]
+gradient = SubResource("Gradient_hd2fy")
+width = 80
+height = 80
+
+[node name="FieldPlayer" type="CharacterBody2D" unique_id=1883165790]
 script = ExtResource("1_n6klx")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=808974110]
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1430777160]
+shape = SubResource("RectangleShape2D_n6klx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1631304949]
+texture = SubResource("GradientTexture2D_d35du")
