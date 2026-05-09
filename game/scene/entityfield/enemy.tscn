@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://b1q8wkelaehjq"]
 
-[node name="Enemy" type="Node2D" unique_id=773033213]
+[ext_resource type="Script" uid="uid://bduiafh47sdav" path="res://script/entityfield/enemy.gd" id="1_x66cx"]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=168348125]
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-color = Color(1, 0, 1, 1)
+[sub_resource type="Gradient" id="Gradient_sa13k"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x66cx"]
+gradient = SubResource("Gradient_sa13k")
+width = 40
+height = 40
+
+[node name="Enemy" type="Node2D" unique_id=773033213]
+script = ExtResource("1_x66cx")
+
+[node name="ColorRect" type="Sprite2D" parent="." unique_id=1193575565]
+texture = SubResource("GradientTexture2D_x66cx")
+centered = false

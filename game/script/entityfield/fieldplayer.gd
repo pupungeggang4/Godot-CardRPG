@@ -7,6 +7,8 @@ extends Node2D
 @export var moving_direction: Vector2 = Vector2(0, 0)
 @export var arrows: Array = ['key_left', 'key_right', 'key_up', 'key_down']
 
+@onready var node_enemies = get_tree().current_scene.get_node('FieldMap/Enemies')
+
 func _ready() -> void:
     position = Vector2(0, 0)
     
@@ -34,6 +36,11 @@ func _process(delta: float) -> void:
                     position.x = grid_position.x * 40
                     position.y = grid_position.y * 40
                     moving = false
+                    for enemy in node_enemies.get_children():
+                        if enemy.grid_position == grid_position:
+                            get_tree().change_scene_to_file('res://scene/battle.tscn')
+                            enemy.queue_free()
+                            break
                 else:
                     position += moving_direction * speed * delta
                     moved_distance += speed * delta

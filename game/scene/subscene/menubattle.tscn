@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b2l5tsskv54vw"]
+
+[ext_resource type="Script" uid="uid://bdmdlfeewlyxp" path="res://script/subscene/menubattle.gd" id="1_eiusr"]
+
+[node name="MenuBattle" type="Control" unique_id=1919989580]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_eiusr")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1463853631]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 160.0
+offset_right = 960.0
+offset_bottom = 560.0
+
+[node name="TextTitle" type="Label" parent="Background" unique_id=1180962207]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 77.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Paused"
+
+[node name="ButtonResume" type="Button" parent="Background" unique_id=1542376110]
+layout_mode = 0
+offset_top = 80.0
+offset_right = 640.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 32
+text = "Resume"
+
+[node name="ButtonSurrender" type="Button" parent="Background" unique_id=1467584324]
+layout_mode = 0
+offset_top = 160.0
+offset_right = 640.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 32
+text = "Surrender"
+
+[node name="ButtonExit" type="Button" parent="Background" unique_id=272291521]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 640.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 32
+text = "Exit"
+
+[node name="ButtonQuit" type="Button" parent="Background" unique_id=164192049]
+layout_mode = 0
+offset_top = 320.0
+offset_right = 640.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 32
+text = "Quit Game"
+
+[connection signal="button_up" from="Background/ButtonResume" to="." method="_on_button_resume_button_up"]
+[connection signal="button_up" from="Background/ButtonSurrender" to="." method="_on_button_surrender_button_up"]
+[connection signal="button_up" from="Background/ButtonExit" to="." method="_on_button_exit_button_up"]
+[connection signal="button_up" from="Background/ButtonQuit" to="." method="_on_button_quit_button_up"]
