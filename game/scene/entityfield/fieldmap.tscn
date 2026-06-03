@@ -1,17 +1,23 @@
 [gd_scene format=4 uid="uid://brchtpq364ois"]
 
+[ext_resource type="PackedScene" uid="uid://omvs4mls2xes" path="res://scene/entityfield/save.tscn" id="1_1va0s"]
 [ext_resource type="PackedScene" uid="uid://ddgvvl8sgsfek" path="res://scene/entityfield/fieldplayer.tscn" id="1_4oo5l"]
+[ext_resource type="Script" uid="uid://b2ygreetdu6k2" path="res://script/entityfield/fieldmap.gd" id="1_7lyug"]
 [ext_resource type="PackedScene" uid="uid://b1q8wkelaehjq" path="res://scene/entityfield/enemy.tscn" id="2_1va0s"]
-[ext_resource type="TileSet" uid="uid://cnafwkbhms3na" path="res://resource/tilemap.tres" id="2_e8hw5"]
 
-[node name="Fieldmap" type="Node2D" unique_id=390681414]
+[node name="Fieldmap" type="Node2D" unique_id=390681414 node_paths=PackedStringArray("node_saves", "node_enemies", "node_npcs")]
+script = ExtResource("1_7lyug")
+node_saves = NodePath("Saves")
+node_enemies = NodePath("Enemies")
+node_npcs = NodePath("NPCs")
 
 [node name="TileBackground" type="TileMapLayer" parent="." unique_id=9404475]
 position = Vector2(1, 0)
 tile_map_data = PackedByteArray("AAAHAAoAAAABAAEAAAAIAAoAAAABAAEAAAAJAAoAAAABAAEAAAAKAAoAAAABAAEAAAALAAoAAAABAAEAAAAMAAoAAAABAAEAAAANAAoAAAABAAEAAAAAAAAAAAABAAEAAAAAAAEAAAABAAEAAAABAAEAAAABAAEAAAABAAIAAAABAAEAAAABAAMAAAABAAEAAAABAAQAAAABAAEAAAABAAUAAAABAAEAAAABAAYAAAABAAEAAAABAAcAAAABAAEAAAABAAgAAAABAAEAAAABAAkAAAABAAEAAAAAAAkAAAABAAEAAAAAAAoAAAABAAEAAAABAAoAAAABAAEAAAACAAoAAAABAAEAAAADAAoAAAABAAEAAAAEAAoAAAABAAEAAAAFAAoAAAABAAEAAAAGAAoAAAABAAEAAAAGAAkAAAABAAEAAAAFAAkAAAABAAEAAAAEAAkAAAABAAEAAAADAAkAAAABAAEAAAACAAkAAAABAAEAAAAAAAMAAAABAAEAAAAAAAIAAAABAAEAAAAAAAgAAAABAAEAAAAAAAcAAAABAAEAAAAAAAYAAAABAAEAAAAAAAUAAAABAAEAAAAAAAQAAAABAAEAAAABAAAAAAABAAEAAAACAAAAAAABAAEAAAADAAAAAAABAAEAAAAEAAAAAAABAAEAAAAFAAAAAAABAAEAAAAGAAAAAAABAAEAAAAHAAAAAAABAAEAAAAIAAAAAAABAAEAAAAJAAAAAAABAAEAAAAKAAAAAAABAAEAAAALAAAAAAABAAEAAAAMAAAAAAABAAEAAAANAAAAAAABAAEAAAAOAAAAAAABAAEAAAAPAAAAAAABAAEAAAAQAAAAAAABAAEAAAAQAAEAAAABAAEAAAAQAAIAAAABAAEAAAAQAAMAAAABAAEAAAAQAAQAAAABAAEAAAAQAAUAAAABAAEAAAAPAAYAAAABAAEAAAAPAAcAAAABAAEAAAAPAAgAAAABAAEAAAAPAAkAAAABAAEAAAAPAAoAAAABAAEAAAAOAAoAAAABAAEAAAA=")
-tile_set = ExtResource("2_e8hw5")
 
 [node name="Saves" type="Node2D" parent="." unique_id=1512104245]
+
+[node name="Save" parent="Saves" unique_id=535429274 instance=ExtResource("1_1va0s")]
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1174920459]
 position = Vector2(1, 0)

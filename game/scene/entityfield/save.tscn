@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://omvs4mls2xes"]
 
+[ext_resource type="Texture2D" uid="uid://b2be5x2sl65py" path="res://asset/image/save.png" id="1_s3687"]
+
 [node name="Save" type="Node2D" unique_id=535429274]
+
+[node name="Save" type="Sprite2D" parent="." unique_id=381437209]
+texture = ExtResource("1_s3687")
+centered = false

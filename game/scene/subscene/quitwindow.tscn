@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://w47mrh4pwqo2"]
+
+[ext_resource type="Script" uid="uid://bosja7v65lghl" path="res://script/subscene/quitwindow.gd" id="1_x826e"]
+
+[node name="Quitwindow" type="Control" unique_id=709985777]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_x826e")
+
+[node name="Bacground" type="ColorRect" parent="." unique_id=1698380705]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 240.0
+offset_right = 960.0
+offset_bottom = 480.0
+
+[node name="TextQuit" type="Label" parent="Bacground" unique_id=789528065]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 201.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Quit Game?"
+
+[node name="ButtonYes" type="Button" parent="Bacground" unique_id=1447054614]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 140.0
+offset_right = 240.0
+offset_bottom = 220.0
+theme_override_font_sizes/font_size = 32
+text = "Yes"
+
+[node name="ButtonNo" type="Button" parent="Bacground" unique_id=1901856361]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 140.0
+offset_right = 560.0
+offset_bottom = 220.0
+theme_override_font_sizes/font_size = 32
+text = "No"
+
+[connection signal="button_up" from="Bacground/ButtonYes" to="." method="_on_button_yes_button_up"]
+[connection signal="button_up" from="Bacground/ButtonNo" to="." method="_on_button_no_button_up"]
